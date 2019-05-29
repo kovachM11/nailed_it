@@ -13,17 +13,21 @@
 
       <!-- Edit link progress_photo start -->
       <div class="col">
-        <a href="/progress_photos/<%= @progress_photo.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit progress photo
-        </a>
+        <% if current_user == @progress_photo.user %>
+          <a href="/progress_photos/<%= @progress_photo.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit progress_photo
+          </a>
+        <% end %>
       </div>
       <!-- Edit link progress_photo end -->
 
       <!-- Delete link progress_photo start -->
       <div class="col">
-        <a href="/delete_progress_photo/<%= @progress_photo.id %>" class="btn btn-block btn-outline-secondary">
-          Delete progress photo
-        </a>
+        <% if current_user == @progress_photo.user %>
+          <a href="/delete_progress_photo/<%= @progress_photo.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete progress_photo
+          </a>
+        <% end %>
       </div>
       <!-- Delete link progress_photo end -->
     </div>
