@@ -5,45 +5,31 @@
 
 <hr>
 
-<!-- Form development start -->
 <form action="/create_development" method="post">
-<!-- Form development end -->
 
-  <!-- Label and input for user_id start -->
   <div class="form-group">
     <label for="user_id">
       User
     </label>
 
-    <!-- Input for user_id start -->
     <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :email, @development.user_id), :class => "form-control") %>
-    <!-- Input for user_id end -->
   </div>
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for trigger start -->
   <div class="form-group">
     <label for="trigger">
       Trigger
     </label>
 
-    <!-- Input for trigger start -->
     <textarea id="trigger" name="trigger" class="form-control" rows="3"></textarea>
-    <!-- Input for trigger end -->
   </div>
-  <!-- Label and input for trigger end -->
 
-  <!-- Label and input for action_id start -->
   <div class="form-group">
     <label for="action_id">
       Action
     </label>
 
-    <!-- Input for action_id start -->
     <%= select_tag(:action_id, options_from_collection_for_select(Action.all, :id, :action_type, @development.action_id), :class => "form-control") %>
-    <!-- Input for action_id end -->
   </div>
-  <!-- Label and input for action_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create development

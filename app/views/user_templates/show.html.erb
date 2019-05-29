@@ -11,13 +11,11 @@
         </a>
       </div>
 
-      <!-- Edit link user start -->
       <div class="col">
         <a href="/users/<%= @user.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit user
         </a>
       </div>
-      <!-- Edit link user end -->
 
     </div>
 
@@ -25,70 +23,55 @@
       <dt>
         Email
       </dt>
-      <!-- Display email start -->
       <dd>
         <%= @user.email %>
       </dd>
-      <!-- Display email end -->
 
       <dt>
         Password
       </dt>
-      <!-- Display password start -->
       <dd>
         <%= @user.password %>
       </dd>
-      <!-- Display password end -->
 
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @user.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Pledge
       </dt>
-      <!-- Display pledge start -->
       <dd>
         <%= @user.pledge %>
       </dd>
-      <!-- Display pledge end -->
 
       <dt>
         Photo
       </dt>
-      <!-- Display photo start -->
       <dd>
         <img src="<%= @user.photo %>" class="img-fluid">
       </dd>
-      <!-- Display photo end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@user.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@user.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "user_templates/user_progress_photos" %>
@@ -100,4 +83,3 @@
     <%= render partial: "user_templates/user_developments" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @action.errors.any? %>
   <% @action.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,21 +12,15 @@
 
 <hr>
 
-<!-- Form action start -->
 <form action="/update_action/<%= @action.id %>" method="post">
-<!-- Form action end -->
 
-  <!-- Label and input for action_type start -->
   <div class="form-group">
     <label for="action_type">
       Action type
     </label>
 
-    <!-- Input for action_type start -->
     <input type="text" id="action_type" name="action_type" class="form-control" value="<%= @action.action_type %>">
-    <!-- Input for action_type end -->
   </div>
-  <!-- Label and input for action_type end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update action

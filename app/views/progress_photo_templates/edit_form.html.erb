@@ -4,37 +4,25 @@
 
 <hr>
 
-<!-- Form progress_photo start -->
 <form action="/update_progress_photo/<%= @progress_photo.id %>" method="post" enctype="multipart/form-data">
-<!-- Form progress_photo end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for comment start -->
   <div class="form-group">
     <label for="comment">
       Comment
     </label>
 
-    <!-- Input for comment start -->
     <textarea id="comment" name="comment" class="form-control" rows="3"><%= @progress_photo.comment %></textarea>
-    <!-- Input for comment end -->
   </div>
-  <!-- Label and input for comment end -->
 
-  <!-- Label and input for picture start -->
   <div class="form-group">
     <label for="picture">
       Picture
     </label>
 
-    <!-- Input for picture start -->
     <%= cl_image_tag(@progress_photo.picture.to_s, :width => 90, :height => 90, :crop => :thumb) %>
     <input type="file" id="picture" name="picture" class="form-control">
-    <!-- Input for picture end -->
   </div>
-  <!-- Label and input for picture end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update progress photo

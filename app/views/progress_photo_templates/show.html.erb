@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link progress_photo start -->
       <div class="col">
         <% if current_user == @progress_photo.user %>
           <a href="/progress_photos/<%= @progress_photo.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link progress_photo end -->
 
-      <!-- Delete link progress_photo start -->
       <div class="col">
         <% if current_user == @progress_photo.user %>
           <a href="/delete_progress_photo/<%= @progress_photo.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link progress_photo end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @progress_photo.user.present? %>
           <a href="/users/<%= @progress_photo.user_id %>">
@@ -44,46 +39,35 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Comment
       </dt>
-      <!-- Display comment start -->
       <dd>
         <%= @progress_photo.comment %>
       </dd>
-      <!-- Display comment end -->
 
       <dt>
         Picture
       </dt>
-      <!-- Display picture start -->
       <dd>
         <img src="<%= @progress_photo.picture %>" class="img-fluid">
       </dd>
-      <!-- Display picture end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@progress_photo.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@progress_photo.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

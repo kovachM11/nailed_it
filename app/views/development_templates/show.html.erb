@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link development start -->
       <div class="col">
         <a href="/developments/<%= @development.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit development
         </a>
       </div>
-      <!-- Edit link development end -->
 
-      <!-- Delete link development start -->
       <div class="col">
         <a href="/delete_development/<%= @development.id %>" class="btn btn-block btn-outline-secondary">
           Delete development
         </a>
       </div>
-      <!-- Delete link development end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @development.user.present? %>
           <a href="/users/<%= @development.user_id %>">
@@ -40,21 +35,17 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Trigger
       </dt>
-      <!-- Display trigger start -->
       <dd>
         <%= @development.trigger %>
       </dd>
-      <!-- Display trigger end -->
 
       <dt>
         Action
       </dt>
-      <!-- Display action_id start -->
       <dd>
         <% if @development.action.present? %>
           <a href="/actions/<%= @development.action_id %>">
@@ -62,28 +53,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display action_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@development.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@development.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
