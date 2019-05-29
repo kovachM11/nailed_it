@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :developments,
+             :dependent => :destroy
+
   has_many   :progress_photos,
              :dependent => :destroy
 

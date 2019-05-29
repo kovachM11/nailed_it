@@ -4,6 +4,8 @@ RSpec.describe User, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:developments) }
+
     it { should have_many(:progress_photos) }
 
     end
