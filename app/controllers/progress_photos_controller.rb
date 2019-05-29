@@ -42,7 +42,7 @@ class ProgressPhotosController < ApplicationController
   def update_row
     @progress_photo = ProgressPhoto.find(params.fetch("id_to_modify"))
 
-    @progress_photo.user_id = params.fetch("user_id")
+    
     @progress_photo.comment = params.fetch("comment")
     @progress_photo.picture = params.fetch("picture") if params.key?("picture")
 
