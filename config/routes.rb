@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "progress_photos#index"
   # Routes for the Action resource:
 
   # CREATE
