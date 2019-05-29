@@ -1,0 +1,82 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Progress photo #<%= @progress_photo.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/progress_photos" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link progress_photo start -->
+      <div class="col">
+        <a href="/progress_photos/<%= @progress_photo.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit progress photo
+        </a>
+      </div>
+      <!-- Edit link progress_photo end -->
+
+      <!-- Delete link progress_photo start -->
+      <div class="col">
+        <a href="/delete_progress_photo/<%= @progress_photo.id %>" class="btn btn-block btn-outline-secondary">
+          Delete progress photo
+        </a>
+      </div>
+      <!-- Delete link progress_photo end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @progress_photo.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Comment
+      </dt>
+      <!-- Display comment start -->
+      <dd>
+        <%= @progress_photo.comment %>
+      </dd>
+      <!-- Display comment end -->
+
+      <dt>
+        Picture
+      </dt>
+      <!-- Display picture start -->
+      <dd>
+        <%= @progress_photo.picture %>
+      </dd>
+      <!-- Display picture end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@progress_photo.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@progress_photo.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

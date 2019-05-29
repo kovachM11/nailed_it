@@ -1,0 +1,57 @@
+<h1>
+  Add a new progress photo
+</h1>
+
+
+<hr>
+
+<!-- Form progress_photo start -->
+<form action="/create_progress_photo" method="post">
+<!-- Form progress_photo end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for comment start -->
+  <div class="form-group">
+    <label for="comment">
+      Comment
+    </label>
+
+    <!-- Input for comment start -->
+    <textarea id="comment" name="comment" class="form-control" rows="3"></textarea>
+    <!-- Input for comment end -->
+  </div>
+  <!-- Label and input for comment end -->
+
+  <!-- Label and input for picture start -->
+  <div class="form-group">
+    <label for="picture">
+      Picture
+    </label>
+
+    <!-- Input for picture start -->
+    <input type="text" id="picture" name="picture" class="form-control">
+    <!-- Input for picture end -->
+  </div>
+  <!-- Label and input for picture end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create progress photo
+  </button>
+</form>
+
+<hr>
+
+<a href="/progress_photos">
+  Go back
+</a>
