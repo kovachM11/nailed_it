@@ -14,7 +14,7 @@
 <hr>
 
 <!-- Form progress_photo start -->
-<form action="/update_progress_photo/<%= @progress_photo.id %>" method="post">
+<form action="/update_progress_photo/<%= @progress_photo.id %>" method="post" enctype="multipart/form-data">
 <!-- Form progress_photo end -->
 
   <!-- Label and input for user_id start -->
@@ -48,7 +48,8 @@
     </label>
 
     <!-- Input for picture start -->
-    <input type="text" id="picture" name="picture" class="form-control" value="<%= @progress_photo.picture %>">
+    <%= cl_image_tag(@progress_photo.picture.to_s, :width => 90, :height => 90, :crop => :thumb) %>
+    <input type="file" id="picture" name="picture" class="form-control">
     <!-- Input for picture end -->
   </div>
   <!-- Label and input for picture end -->

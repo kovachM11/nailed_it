@@ -22,7 +22,7 @@ class ProgressPhotosController < ApplicationController
 
     @progress_photo.user_id = params.fetch("user_id")
     @progress_photo.comment = params.fetch("comment")
-    @progress_photo.picture = params.fetch("picture")
+    @progress_photo.picture = params.fetch("picture") if params.key?("picture")
 
     if @progress_photo.valid?
       @progress_photo.save
@@ -44,7 +44,7 @@ class ProgressPhotosController < ApplicationController
 
     @progress_photo.user_id = params.fetch("user_id")
     @progress_photo.comment = params.fetch("comment")
-    @progress_photo.picture = params.fetch("picture")
+    @progress_photo.picture = params.fetch("picture") if params.key?("picture")
 
     if @progress_photo.valid?
       @progress_photo.save

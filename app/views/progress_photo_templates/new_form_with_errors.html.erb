@@ -17,7 +17,7 @@
 <hr>
 
 <!-- Form progress_photo start -->
-<form action="/create_progress_photo" method="post">
+<form action="/create_progress_photo" method="post" enctype="multipart/form-data">
 <!-- Form progress_photo end -->
 
   <!-- Label and input for user_id start -->
@@ -51,7 +51,7 @@
     </label>
 
     <!-- Input for picture start -->
-    <input type="text" id="picture" name="picture" class="form-control" value="<%= @progress_photo.picture %>">
+    <input type="file" id="picture" name="picture" class="form-control">
     <!-- Input for picture end -->
   </div>
   <!-- Label and input for picture end -->
