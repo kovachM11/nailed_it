@@ -1,0 +1,82 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Development #<%= @development.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/developments" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link development start -->
+      <div class="col">
+        <a href="/developments/<%= @development.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit development
+        </a>
+      </div>
+      <!-- Edit link development end -->
+
+      <!-- Delete link development start -->
+      <div class="col">
+        <a href="/delete_development/<%= @development.id %>" class="btn btn-block btn-outline-secondary">
+          Delete development
+        </a>
+      </div>
+      <!-- Delete link development end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @development.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Trigger
+      </dt>
+      <!-- Display trigger start -->
+      <dd>
+        <%= @development.trigger %>
+      </dd>
+      <!-- Display trigger end -->
+
+      <dt>
+        Action
+      </dt>
+      <!-- Display action_id start -->
+      <dd>
+        <%= @development.action_id %>
+      </dd>
+      <!-- Display action_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@development.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@development.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

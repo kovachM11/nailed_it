@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Development resource:
+
+  # CREATE
+  get("/developments/new", { :controller => "developments", :action => "new_form" })
+  post("/create_development", { :controller => "developments", :action => "create_row" })
+
+  # READ
+  get("/developments", { :controller => "developments", :action => "index" })
+  get("/developments/:id_to_display", { :controller => "developments", :action => "show" })
+
+  # UPDATE
+  get("/developments/:prefill_with_id/edit", { :controller => "developments", :action => "edit_form" })
+  post("/update_development/:id_to_modify", { :controller => "developments", :action => "update_row" })
+
+  # DELETE
+  get("/delete_development/:id_to_remove", { :controller => "developments", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Progress photo resource:
 
   # CREATE
