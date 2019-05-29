@@ -1,0 +1,64 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Action #<%= @action.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/actions" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link action start -->
+      <div class="col">
+        <a href="/actions/<%= @action.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit action
+        </a>
+      </div>
+      <!-- Edit link action end -->
+
+      <!-- Delete link action start -->
+      <div class="col">
+        <a href="/delete_action/<%= @action.id %>" class="btn btn-block btn-outline-secondary">
+          Delete action
+        </a>
+      </div>
+      <!-- Delete link action end -->
+    </div>
+
+    <dl>
+      <dt>
+        Action type
+      </dt>
+      <!-- Display action_type start -->
+      <dd>
+        <%= @action.action_type %>
+      </dd>
+      <!-- Display action_type end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@action.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@action.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

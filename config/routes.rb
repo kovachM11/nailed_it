@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Action resource:
+
+  # CREATE
+  get("/actions/new", { :controller => "actions", :action => "new_form" })
+  post("/create_action", { :controller => "actions", :action => "create_row" })
+
+  # READ
+  get("/actions", { :controller => "actions", :action => "index" })
+  get("/actions/:id_to_display", { :controller => "actions", :action => "show" })
+
+  # UPDATE
+  get("/actions/:prefill_with_id/edit", { :controller => "actions", :action => "edit_form" })
+  post("/update_action/:id_to_modify", { :controller => "actions", :action => "update_row" })
+
+  # DELETE
+  get("/delete_action/:id_to_remove", { :controller => "actions", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Development resource:
 
   # CREATE
