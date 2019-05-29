@@ -33,6 +33,22 @@ class DevelopmentsController < ApplicationController
     end
   end
 
+  def create_row_from_action
+    @development = Development.new
+
+    @development.user_id = params.fetch("user_id")
+    @development.trigger = params.fetch("trigger")
+    @development.action_id = params.fetch("action_id")
+
+    if @development.valid?
+      @development.save
+
+      redirect_to("/actions/#{@development.action_id}", notice: "Development created successfully.")
+    else
+      render("development_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @development = Development.find(params.fetch("prefill_with_id"))
 

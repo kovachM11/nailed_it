@@ -1,0 +1,37 @@
+<!-- Form development start -->
+<form action="/create_development_from_action" method="post">
+<!-- Form development end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @development.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for trigger start -->
+  <div class="form-group">
+    <label for="trigger">
+      Trigger
+    </label>
+
+    <!-- Input for trigger start -->
+    <textarea id="trigger" name="trigger" class="form-control" rows="3"><%= @development.trigger %></textarea>
+    <!-- Input for trigger end -->
+  </div>
+  <!-- Label and input for trigger end -->
+
+  <!-- Label and input for action_id start -->
+  <!-- Input for action_id start -->
+  <input type="hidden" name="action_id" value="<%= @action.id %>">
+  <!-- Input for action_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create development
+  </button>
+</form>

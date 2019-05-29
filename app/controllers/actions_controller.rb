@@ -6,6 +6,7 @@ class ActionsController < ApplicationController
   end
 
   def show
+    @development = Development.new
     @action = Action.find(params.fetch("id_to_display"))
 
     render("action_templates/show.html.erb")
