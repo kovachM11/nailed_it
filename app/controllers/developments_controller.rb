@@ -1,6 +1,7 @@
 class DevelopmentsController < ApplicationController
   def index
-    @developments = Development.page(params[:page]).per(10)
+    @q = Development.ransack(params[:q])
+    @developments = @q.result(:distinct => true).includes(:user, :action).page(params[:page]).per(10)
 
     render("development_templates/index.html.erb")
   end

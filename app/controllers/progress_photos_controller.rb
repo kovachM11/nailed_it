@@ -10,7 +10,8 @@ class ProgressPhotosController < ApplicationController
   end
 
   def index
-    @progress_photos = ProgressPhoto.page(params[:page]).per(10)
+    @q = ProgressPhoto.ransack(params[:q])
+    @progress_photos = @q.result(:distinct => true).includes(:user).page(params[:page]).per(10)
 
     render("progress_photo_templates/index.html.erb")
   end
