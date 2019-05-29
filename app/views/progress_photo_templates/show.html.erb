@@ -38,7 +38,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @progress_photo.user_id %>
+        <% if @progress_photo.user.present? %>
+          <a href="/users/<%= @progress_photo.user_id %>">
+            <%= @progress_photo.user.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 

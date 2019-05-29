@@ -62,7 +62,11 @@
 
         <!-- Display development.user_id start -->
         <td>
-          <%= development.user.email %>
+          <% if development.user.present? %>
+            <a href="/users/<%= development.user.id %>">
+              <%= development.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display development.user_id end -->
 
@@ -74,7 +78,11 @@
 
         <!-- Display development.action_id start -->
         <td>
-          <%= development.action.action_type %>
+          <% if development.action.present? %>
+            <a href="/actions/<%= development.action.id %>">
+              <%= development.action.action_type %>
+            </a>
+          <% end %>
         </td>
         <!-- Display development.action_id end -->
 

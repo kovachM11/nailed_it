@@ -34,7 +34,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @development.user_id %>
+        <% if @development.user.present? %>
+          <a href="/users/<%= @development.user_id %>">
+            <%= @development.user.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 
@@ -52,7 +56,11 @@
       </dt>
       <!-- Display action_id start -->
       <dd>
-        <%= @development.action_id %>
+        <% if @development.action.present? %>
+          <a href="/actions/<%= @development.action_id %>">
+            <%= @development.action.action_type %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display action_id end -->
 

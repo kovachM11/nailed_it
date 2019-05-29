@@ -62,7 +62,11 @@
 
         <!-- Display progress_photo.user_id start -->
         <td>
-          <%= progress_photo.user.email %>
+          <% if progress_photo.user.present? %>
+            <a href="/users/<%= progress_photo.user.id %>">
+              <%= progress_photo.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display progress_photo.user_id end -->
 
