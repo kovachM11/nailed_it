@@ -1,6 +1,6 @@
 class DevelopmentsController < ApplicationController
   def index
-    @developments = Development.all
+    @developments = Development.page(params[:page]).per(10)
 
     render("development_templates/index.html.erb")
   end

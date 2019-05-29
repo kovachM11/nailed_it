@@ -10,7 +10,7 @@ class ProgressPhotosController < ApplicationController
   end
 
   def index
-    @progress_photos = ProgressPhoto.all
+    @progress_photos = ProgressPhoto.page(params[:page]).per(10)
 
     render("progress_photo_templates/index.html.erb")
   end
