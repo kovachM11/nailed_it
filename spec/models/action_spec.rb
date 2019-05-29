@@ -4,6 +4,8 @@ RSpec.describe Action, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:developments) }
+
     end
 
     describe "InDirect Associations" do

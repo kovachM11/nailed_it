@@ -4,6 +4,8 @@ RSpec.describe Development, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:action) }
+
     it { should belong_to(:user) }
 
     end
