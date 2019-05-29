@@ -55,6 +55,22 @@ class DevelopmentsController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @development = Development.find(params.fetch("id_to_remove"))
+
+    @development.destroy
+
+    redirect_to("/users/#{@development.user_id}", notice: "Development deleted successfully.")
+  end
+
+  def destroy_row_from_action
+    @development = Development.find(params.fetch("id_to_remove"))
+
+    @development.destroy
+
+    redirect_to("/actions/#{@development.action_id}", notice: "Development deleted successfully.")
+  end
+
   def destroy_row
     @development = Development.find(params.fetch("id_to_remove"))
 

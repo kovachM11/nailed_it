@@ -55,6 +55,14 @@ class ProgressPhotosController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @progress_photo = ProgressPhoto.find(params.fetch("id_to_remove"))
+
+    @progress_photo.destroy
+
+    redirect_to("/users/#{@progress_photo.user_id}", notice: "ProgressPhoto deleted successfully.")
+  end
+
   def destroy_row
     @progress_photo = ProgressPhoto.find(params.fetch("id_to_remove"))
 

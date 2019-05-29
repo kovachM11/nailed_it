@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Progress Photos
+
+    <a data-toggle="collapse" href="#user_progress_photos_new_form">
+      Add progress photo
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.progress_photos.each do |progress_photo| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/progress_photos/<%= progress_photo.id %>">
+          <%= progress_photo.id %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>
